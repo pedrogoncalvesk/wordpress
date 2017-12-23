@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+## GET YOUR THEME HERE
+
+echo "Theme installed!";
+echo "Executing apache2-foreground";
+
+# Force wp-content accessible for www-data user
+chown -R www-data:www-data /var/www/html/wp-content
+
+# Execute apache
+exec "apache2-foreground"
