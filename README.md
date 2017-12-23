@@ -12,24 +12,28 @@ Usage
 
 You can use this image with custom runtime commands. Use the template below (apache2-custom file) and run the following commands:
 
-*   apache2-custom file
-```sh 
-#!/bin/sh
-set -e
- 
-## GET YOUR THEME HERE
- 
-echo "Theme installed!";
-echo "Executing apache2-foreground";
- 
-# Force wp-content accessible for www-data user
-chown -R www-data:www-data /var/www/html/wp-content
- 
-# Execute apache
-exec "apache2-foreground"
-```
+####Example ```apache2-custom``` file:
 
-* ```$ docker run --name some-wordpress --link some-mysql:mysql -v /path/to/apache2-custom:/usr/local/bin/apache2-custom:ro -d pedrogoncalvesk/wordpress```
+```#!/bin/sh```
+```set -e```
+ 
+```## GET YOUR THEME HERE```
+ 
+```echo "Theme installed!";```
+
+```echo "Executing apache2-foreground";```
+ 
+```# Force wp-content accessible for www-data user```
+
+```chown -R www-data:www-data /var/www/html/wp-content```
+ 
+```# Execute apache```
+
+```exec "apache2-foreground"```
+
+### Run custom
+
+```$ docker run --name some-wordpress --link some-mysql:mysql -v /path/to/apache2-custom:/usr/local/bin/apache2-custom:ro -d pedrogoncalvesk/wordpress```
 
 License
 ----
