@@ -1,4 +1,4 @@
-FROM wordpress:latest
+FROM wordpress:4.9.0-php7.1-apache
 
 MAINTAINER Pedro Pereira <pedrogoncalvesp.95@gmail.com>
 
