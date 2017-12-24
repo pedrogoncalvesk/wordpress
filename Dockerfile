@@ -1,4 +1,4 @@
-FROM wordpress:4.9.1-php7.1-apache
+FROM wordpress:latest
 
 MAINTAINER Pedro Pereira <pedrogoncalvesp.95@gmail.com>
 
@@ -12,12 +12,12 @@ RUN apt-get update && \
 RUN { \
         echo 'date.timezone="America/Sao_Paulo"'; \
         echo 'log_errors=Off'; \
-        echo 'max_execution_time=4000'; \
+        echo 'max_execution_time=400'; \
         echo 'max_input_vars=10000'; \
-        echo 'max_input_time=4000'; \
-        echo 'memory_limit=512M'; \
-        echo 'post_max_size=64M'; \
-        echo 'upload_max_filesize=64M'; \
+        echo 'max_input_time=400'; \
+        echo 'memory_limit=256M'; \
+        echo 'post_max_size=5M'; \
+        echo 'upload_max_filesize=5M'; \
     } > /usr/local/etc/php/conf.d/php-extra.ini
 
 COPY apache2-custom /usr/local/bin

@@ -1,6 +1,9 @@
 Supported tags
 ----
 
+* ```4.9.1-php7.1-apache-higher```
+* ```4.9.1-php7.1-apache```
+* ```4.9.0-php7.1-apache-higher```
 * ```4.9.0-php7.1-apache```
 * ```4.8.1-php7.1-apache```
 * ```4.7-php5.6-apache```
