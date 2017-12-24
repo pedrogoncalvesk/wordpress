@@ -17,7 +17,9 @@ You can use this image with custom runtime commands. Use the template below (apa
 
 ### Example ```apache2-custom``` file:
 
-```#!/bin/sh```
+~~~sh
+#!/bin/sh
+~~~
 
 ```set -e```
  
