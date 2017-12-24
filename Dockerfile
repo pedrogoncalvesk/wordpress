@@ -1,4 +1,4 @@
-FROM wordpress:4.9.0-php7.1-apache
+FROM wordpress:latest
 
 MAINTAINER Pedro Pereira <pedrogoncalvesp.95@gmail.com>
 
@@ -13,7 +13,7 @@ RUN { \
         echo 'date.timezone="America/Sao_Paulo"'; \
         echo 'log_errors=Off'; \
         echo 'max_execution_time=4000'; \
-        echo 'max_input_vars=100000'; \
+        echo 'max_input_vars=10000'; \
         echo 'max_input_time=40000'; \
         echo 'memory_limit=512M'; \
         echo 'post_max_size=20M'; \
